@@ -1,0 +1,80 @@
+.sidenav {
+    height: 100%;
+    width: 90px;
+    position: fixed;
+    z-index: 301;
+    top: 0;
+    left: 0;
+    background-color: #262830;
+    border-right: 1px solid rgba(64, 64, 64, 0.5);
+    box-shadow: 8px 0 3px -6px rgba(64, 64, 64, 0.5);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 40px;
+    
+}
+
+.sidenav .sideNavItem:first-child{
+    margin-top: 30px;
+}
+.sidenav.collapseSide .sideNavItem > img{
+    visibility: visible;
+    height: 24px;
+    width: 24px;
+}
+
+.sidenav .sideNavItem > img{
+    visibility: visible;
+    height: 24px;
+    width: 24px;
+    margin-right: 20px;
+    margin-top: -4px;
+    position: relative;
+    top: 4px;
+}
+
+.sidenav .sideNavItem {
+    padding: 8px 8px 8px 15px;
+    text-decoration: none;
+    font-size: 1vw;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    display: block;
+    border-left: 3px solid #262835;
+    cursor: pointer;
+    margin: 5px 0 5px 0;
+}
+
+.sidenav > .activeSideItem, .sidenav .sideNavItem:hover, .sidenav .sideNavItem:active, .sidenav .sideNavItem:focus {
+    border-left: 3px solid #0099cc;
+    background-color: #494d66;
+    text-decoration: none;
+    text-transform: none;
+}
+
+.invisib{
+    visibility: visible;
+  transition: all 0.1s ease-in-out;
+  transform: translate(-100px);
+
+}
+.visib{
+    visibility: visible;
+    color:;
+    
+    animation-name: slideInLeft;
+    animation-duration: 0.3s;
+}
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}

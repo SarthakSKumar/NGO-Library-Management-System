@@ -1,0 +1,20 @@
+.reflinks{
+	text-decoration:none;
+	 
+
+}
+.reflinks:hover{
+text-decoration: underline overline #0099cc;
+color:#000000 !important;
+
+
+}
+.log{
+	display:flex;
+	width:9vw;
+	color:#ffffff;
+	border-radius: 4px;
+	background-color: #0099cc;
+	margin-top: 1vh;
+	margin-left:7vw;
+}
