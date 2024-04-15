@@ -12,10 +12,10 @@ const LoginIndex = ({ updateRoutes }) => {
 
 	const handleSubmit = e => {
 		e.preventDefault();
-		if (email === "library@iiitt.ac.in") setF1(''); else setF1('Invalid Email');
-		if (password === "iiittrichy") setF2(''); else setF2('Invalid Password');
+		if (email === "admin@library") setF1(''); else setF1('Invalid Email');
+		if (password === "library@admin") setF2(''); else setF2('Invalid Password');
 
-		if (email === 'library@iiitt.ac.in' && password === 'iiittrichy') {
+		if (email === 'admin@library' && password === 'library@admin') {
 			updateRoutes(true);
 			navigate('/home');
 		}

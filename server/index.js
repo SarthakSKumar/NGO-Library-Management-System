@@ -4,16 +4,15 @@ const cors = require("cors");
 const knex = require("knex");
 require("dotenv").config();
 
-console.log(process.env.DATABASE_URL);
 const db = knex({
   client: "pg",
   connection: {
     connectionString: process.env.DATABASE_URL,
-    host: "dpg-coej1eol5elc7389ph1g-a.singapore-postgres.render.com",
-    port: 5432,
-    user: "admin",
-    database: "library_db_5bsa",
-    password: "QC1htpEh3eUH20IapM3osLEgJ1bnu0xx",
+    host: process.env.DATABASE_HOSTNAME,
+    port: process.env.DATABASE_PORT,
+    user: process.env.DATABASE_USERNAME,
+    database: process.env.DATABASE_NAME,
+    password: process.env.DATABASE_PASSWORD,
     ssl: true,
   },
   searchPath: ["knex", "public"],
