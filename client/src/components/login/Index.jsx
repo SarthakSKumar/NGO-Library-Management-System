@@ -73,7 +73,7 @@ const LoginIndex = ({ updateRoutes }) => {
 								id="loginBtn"
 								value="Login"
 								formNoValidate
-								disabled={email && password ? null : "true"}
+								disabled={!(email && password)}
 							/>
 						</div>
 					</form>

@@ -3,7 +3,7 @@ import moment from 'moment';
 import { Link } from 'react-router-dom';
 
 import { toast } from 'react-toastify';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import { ScaleLoader } from 'react-spinners';
 
 const override = css`
@@ -69,7 +69,7 @@ export default class ListIndex extends React.Component {
 					<div className='sweet-loading' >
 						<ScaleLoader
 							css={override}
-							sizeUnit={"px"}
+							sizeunit={"px"}
 							color={'#0099cc'}
 							size={60}
 							height={35}
