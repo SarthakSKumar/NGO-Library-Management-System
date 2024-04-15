@@ -30,7 +30,17 @@ db.raw("SELECT 1")
 function startServer() {
   const app = express();
 
-  app.use(cors());
+  const corsOptions = {
+    origin: [
+      "http://localhost:5173",
+      "http://localhost:5174",
+      "https://ngo-library-management-system.vercel.app/",
+    ],
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "UPDATE"],
+    optionsSuccessStatus: 200,
+  };
+
+  app.use(cors(corsOptions));
   app.use(bodyParser.json());
 
   app.get("/countbook", async (req, res) => {
