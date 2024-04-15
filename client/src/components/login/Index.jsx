@@ -12,10 +12,10 @@ const LoginIndex = ({ updateRoutes }) => {
 
 	const handleSubmit = e => {
 		e.preventDefault();
-		if (email === "admin@library") setF1(''); else setF1('Invalid Email');
-		if (password === "library@admin") setF2(''); else setF2('Invalid Password');
+		if (email === `${import.meta.env.VITE_LOGIN_EMAIL}`) setF1(''); else setF1('Invalid Email');
+		if (password === `${import.meta.env.VITE_LOGIN_PASSWORD}`) setF2(''); else setF2('Invalid Password');
 
-		if (email === 'admin@library' && password === 'library@admin') {
+		if (email === `${import.meta.env.VITE_LOGIN_EMAIL}` && password === `${import.meta.env.VITE_LOGIN_PASSWORD}`) {
 			updateRoutes(true);
 			navigate('/home');
 		}
