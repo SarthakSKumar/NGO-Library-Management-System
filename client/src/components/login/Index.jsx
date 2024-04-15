@@ -24,7 +24,7 @@ const LoginIndex = ({ updateRoutes }) => {
 	return (
 		<div>
 			<div className="login_home">
-				<img id="logo" src={logoDark} alt="IIIT Trichy" title="IIIT Trichy" style={{ height: '60px' }} />
+				<img id="logo" src={logoDark} style={{ height: '60px' }} />
 				<div id="loginBox">
 					<span id="loginTitle">Sign In</span>
 					<form name="loginForm" onSubmit={handleSubmit}>
@@ -84,7 +84,7 @@ const LoginIndex = ({ updateRoutes }) => {
 					target="_blank"
 					rel="noopener noreferrer"
 				>
-					<i className="glyphicon glyphicon-copyright-mark"> </i> IIIT Trichy
+					<i className="glyphicon glyphicon-copyright-mark"> </i>
 				</a>
 			</div>
 		</div>
